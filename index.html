@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Northstar – Goal Compass Application</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top">
+        <img src="./img/logo.jpg" alt="Northstar Logo" class="logo" />
+        <h1>Northstar</h1>
+        <p>Your personal goal compass</p>
+        <div class="header-controls">
+          <button id="toggle-theme">🌓 Theme</button>
+          <button id="reset-week">♻️ New Week</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Weekly Summary -->
+      <section id="summary">
+        <h2>This Week</h2>
+        <div id="progress-display">0 of 0 goals completed</div>
+      </section>
+
+      <!-- Goal Creation -->
+      <section id="new-goal">
+        <input type="text" id="goal-input" placeholder="Add a new goal..." />
+        <input type="text" id="tag-input" placeholder="Add tags (comma-separated)" />
+        <button id="add-goal">Add Goal</button>
+      </section>
+
+      <!-- Tag Filter UI -->
+      <section id="tag-filter-bar">
+        <h2>Filter by Tag</h2>
+        <div id="tag-filters"></div>
+      </section>
+
+      <!-- Goal List -->
+      <section id="goal-list">
+        <h2>Your Goals</h2>
+        <ul id="goals"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Northstar by Benjamin Liles. Built with love + vanilla JS.</p>
+    </footer>
+
+    <!-- Load script.js first, then goals.js (as module) -->
+    <script src="js/script.js"></script>
+    <script type="module" src="js/goals.js"></script>
+  </body>
+</html>
